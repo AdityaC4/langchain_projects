@@ -22,5 +22,7 @@ if __name__ == "__main__":
 
     print("Generating embeddings...")
     embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
-    PineconeVectorStore.from_documents(texts, embeddings, index_name=os.getenv("INDEX_NAME"))
+    PineconeVectorStore.from_documents(
+        texts, embeddings, index_name=os.getenv("INDEX_NAME")
+    )
     print("Ingestion complete")
