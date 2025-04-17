@@ -27,12 +27,13 @@ def ingest_docs():
     print(f"Adding {len(documents)} chunks to Pinecone")
     BATCH_SIZE = 100  # Adjust as needed to stay under Pinecone limits
     for i in range(0, len(documents), BATCH_SIZE):
-        batch = documents[i:i+BATCH_SIZE]
+        batch = documents[i : i + BATCH_SIZE]
         PineconeVectorStore.from_documents(
             batch,
             embeddings,
             index_name=os.getenv("INDEX_NAME"),
         )
+    print("*** Loaded into Pinecone ***")
 
 
 if __name__ == "__main__":
