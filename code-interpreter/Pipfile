@@ -10,6 +10,7 @@ langchainhub = "*"
 langchain-openai = "*"
 langchain-experimental = "*"
 qrcode = "*"
+pillow = "*"
 
 [dev-packages]
 
