@@ -315,6 +315,20 @@ files = [
 ]
 
 [[package]]
+name = "dotenv"
+version = "0.9.9"
+description = "Deprecated package"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "dotenv-0.9.9-py2.py3-none-any.whl", hash = "sha256:29cf74a087b31dafdb5a446b6d7e11cbce8ed2741540e2339c69fbef92c94ce9"},
+]
+
+[package.dependencies]
+python-dotenv = "*"
+
+[[package]]
 name = "greenlet"
 version = "3.2.0"
 description = "Lightweight in-process concurrent programming"
@@ -1843,4 +1857,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<4.0"
-content-hash = "283bf2bd5b33ebd0e0f2e900d25577a6668aab21dba5ecfe15259d8416112d13"
+content-hash = "2e901a6f531ffa4e75dcfbb47cda0a119b0dcca9f1814a1f0b5e7f9aadd414f2"

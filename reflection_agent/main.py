@@ -1,6 +1,7 @@
-from typing import Sequence, List
-from dotenv import load_dotenv
 import os
+from typing import List, Sequence
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -44,3 +45,16 @@ graph.get_graph().print_ascii()
 
 if __name__ == "__main__":
     print("Hello LangGraph!")
+    inputs = HumanMessage(
+        content="""
+    Make this tweet better:
+    @LangChainAI
+    - newly Tool Calling freaturee is serious underrated.
+    After a long wait, it's here making hte implementation of agents across different models with function calling super easy.
+
+    Make a video covering their newest blog post
+    """
+    )
+
+    response = graph.invoke(inputs)
+    print(response)
